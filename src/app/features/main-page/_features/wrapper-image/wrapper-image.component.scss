@@ -1,0 +1,54 @@
+.wrapper__image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url("https://wallpaperaccess.com/full/2401680.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  .wrapper__elements {
+    position: absolute;
+    bottom: 300px;
+    left: 100px;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .wrapper__sun {
+      width: 300px;
+      height: 300px;
+      background: url("https://assets.stickpng.com/images/580b585b2edbce24c47b2714.png");
+      background-size: cover;
+    }
+    .wrapper__earth {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: 0;
+      left: 0;
+      background: url("https://upload.wikimedia.org/wikipedia/commons/2/22/Earth_Western_Hemisphere_transparent_background.png");
+      background-size: cover;
+      animation: ro 8s infinite;
+    }
+    .wrapper__text {
+      position: absolute;
+      left: 400px;
+      color: rgb(226, 226, 226);
+      font-size: 40px;
+      white-space: nowrap;
+      font-weight: 200;
+    }
+  }
+}
+
+@keyframes ro {
+  40% {
+    top: calc(100% - 40px);
+    left: calc(100% - 40px);
+  }
+
+  100% {
+    z-index: -1;
+  }
+}
