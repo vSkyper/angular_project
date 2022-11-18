@@ -1,0 +1,41 @@
+@import "../../../styles/index.scss";
+
+nav {
+  display: grid;
+  align-items: center;
+  justify-content: flex-end;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: 1fr;
+  background-color: $xiketic;
+  padding: 10px;
+  .logo {
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    img {
+      width: 50px;
+    }
+    span {
+      color: #fff;
+      font-weight: 200;
+      font-size: 25px;
+      margin-left: 5px;
+    }
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    padding-right: 20px;
+    li {
+      a {
+        text-decoration: none;
+        color: #fff;
+        padding: 0px 25px;
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
+  }
+}
