@@ -2,13 +2,12 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LatestLaunchService } from 'src/app/core/api/latest-launch.service';
 
 @Component({
-  selector: 'app-wrapper-image',
-  templateUrl: './wrapper-image.component.html',
-  styleUrls: ['./wrapper-image.component.scss'],
+  selector: 'app-latest-launch',
+  templateUrl: './latest-launch.component.html',
+  styleUrls: ['./latest-launch.component.scss']
 })
-export class WrapperImageComponent implements OnInit {
-  public latestLaunchName: String = '';
-  public latestLaunchDate: String = '';
+export class LatestLaunchComponent implements OnInit {
+  public latestLaunch: any = {};
 
   constructor(
     private latestLaunchService: LatestLaunchService,
@@ -22,8 +21,7 @@ export class WrapperImageComponent implements OnInit {
   async fetchLatestLaunch() {
     this.latestLaunchService.getLatestLaunch().subscribe({
       next: (res) => {
-        this.latestLaunchName = res.name;
-        this.latestLaunchDate = new Date(res.date_unix * 1000).toLocaleDateString();
+        this.latestLaunch = res;
       },
       error: (err) => {
         console.log(err);
@@ -33,4 +31,5 @@ export class WrapperImageComponent implements OnInit {
       },
     });
   }
+
 }

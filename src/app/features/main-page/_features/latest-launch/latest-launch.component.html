@@ -1,0 +1,6 @@
+<p>More info about latest launch:</p>
+<p>Crew:</p>
+<ng-container *ngFor="let crewMemberId of latestLaunch.crew">
+    <app-crew [crewMemberId]="crewMemberId"></app-crew>
+</ng-container>
+

@@ -5,10 +5,10 @@ import { Observable } from 'rxjs/internal/Observable';
 @Injectable({
   providedIn: 'root',
 })
-export class LatestLaunchService {
+export class CrewService {
   constructor(private httpClient: HttpClient) {}
 
-  getLatestLaunch(): Observable<any> {
-    return this.httpClient.get('https://api.spacexdata.com/v4/launches/latest');
+  getCrew(id: string): Observable<any> {
+    return this.httpClient.get(`https://api.spacexdata.com/v4/crew/${id}`);
   }
 }
