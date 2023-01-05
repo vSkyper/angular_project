@@ -16,16 +16,15 @@ export class CrewComponent implements OnInit {
     private crewService: CrewService,
     private changeDetectorRef: ChangeDetectorRef
   ) {
+    console.log(1);
     this.fetchCrewMember();
   }
 
   ngOnInit(): void {}
 
   async fetchCrewMember() {
-    console.log(this.crewMemberId);
     this.crewService.getCrew(this.crewMemberId).subscribe({
       next: (res) => {
-        console.log(res);
         this.crewMemberName = res.name;
       },
       error: (err) => {

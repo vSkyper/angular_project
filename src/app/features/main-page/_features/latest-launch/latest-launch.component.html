@@ -1,6 +1,7 @@
-<p>More info about latest launch:</p>
-<p>Crew:</p>
-<ng-container *ngFor="let crewMemberId of latestLaunch.crew">
+<section class="latest__launch">
+  <section class="main__title">More info about latest launch</section>
+  <p>Crew:</p>
+  <ng-container *ngFor="let crewMemberId of latestLaunch.crew">
     <app-crew [crewMemberId]="crewMemberId"></app-crew>
-</ng-container>
-
+  </ng-container>
+</section>

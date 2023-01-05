@@ -7,8 +7,8 @@ import { LatestLaunchService } from 'src/app/core/api/latest-launch.service';
   styleUrls: ['./wrapper-image.component.scss'],
 })
 export class WrapperImageComponent implements OnInit {
-  public latestLaunchName: String = '';
-  public latestLaunchDate: String = '';
+  public latestLaunchName: string = '';
+  public latestLaunchDate: number = 0;
 
   constructor(
     private latestLaunchService: LatestLaunchService,
@@ -23,7 +23,7 @@ export class WrapperImageComponent implements OnInit {
     this.latestLaunchService.getLatestLaunch().subscribe({
       next: (res) => {
         this.latestLaunchName = res.name;
-        this.latestLaunchDate = new Date(res.date_unix * 1000).toLocaleDateString();
+        this.latestLaunchDate = res.date_unix * 1000;
       },
       error: (err) => {
         console.log(err);
