@@ -1,5 +1,28 @@
+@import '/src/styles/index.scss';
+
 article {
   margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.date {
+  background-color: $dark-sienna;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  display: inline-grid;
+  place-items: center;
+  font-size: 25px;
+  font-weight: 300;
+  color: white;
+}
+
+.info {
+  padding: 20px;
+  display: inline-grid;
+  align-items: center;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .title {

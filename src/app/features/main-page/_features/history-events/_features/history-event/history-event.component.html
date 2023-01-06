@@ -1,4 +1,7 @@
 <article>
-  <section class="title">{{ historyEvent.title }} -- {{ historyEvent.event_date_utc | date: "d/M/y" }}</section>
-  <section class="details">{{ historyEvent.details }}</section>
+  <section class="date">{{ historyEvent.event_date_utc | date : "d/M/y" }}</section>
+  <section class="info">
+    <section class="title">{{ historyEvent.title }}</section>
+    <section>{{ historyEvent.details }}</section>
+  </section>
 </article>
