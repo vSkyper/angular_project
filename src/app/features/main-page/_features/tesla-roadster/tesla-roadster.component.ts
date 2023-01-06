@@ -29,22 +29,22 @@ export class TeslaRoadsterComponent implements OnInit {
 
         this.teslaRoadsterImages = res.flickr_images;
         this.teslaRoadsterInformationList.push({
-          title: 'Launch date:',
+          title: 'Launch date',
           desc: `${datePipe.transform(
             res.launch_date_utc,
             'MMM d, y, h:mm:ss a'
           )}`,
         });
         this.teslaRoadsterInformationList.push({
-          title: 'Mass:',
+          title: 'Mass',
           desc: `${res.launch_mass_kg} kg`,
         });
         this.teslaRoadsterInformationList.push({
-          title: 'Speed:',
+          title: 'Speed',
           desc: `${decimalPipe.transform(res.speed_kph, '.2-2')} km/h`,
         });
         this.teslaRoadsterInformationList.push({
-          title: 'Period:',
+          title: 'Period',
           desc: `${decimalPipe.transform(res.period_days, '.2-2')} days`,
         });
       },

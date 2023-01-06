@@ -10,7 +10,7 @@ article {
   background-color: $dark-sienna;
   border-radius: 12px 0 0 12px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  display: inline-grid;
+  display: grid;
   place-items: center;
   font-size: 25px;
   font-weight: 300;
@@ -19,7 +19,7 @@ article {
 
 .info {
   padding: 20px;
-  display: inline-grid;
+  display: grid;
   align-items: center;
   border-radius: 0 12px 12px 0;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
