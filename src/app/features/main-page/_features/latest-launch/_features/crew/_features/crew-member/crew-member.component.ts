@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { CrewService } from 'src/app/core/api/crew.service';
+import { CrewMember, _crewMember } from 'src/app/core/models/interfaces';
 
 @Component({
   selector: 'app-crew-member',
@@ -8,9 +9,10 @@ import { CrewService } from 'src/app/core/api/crew.service';
 })
 export class CrewMemberComponent implements OnInit {
   @Input()
-  public crewMemberId: string = '';
+  public crewMember: CrewMember = _crewMember;
 
   public crewMemberName: string = '';
+  public crewMemberRole: string = '';
   public crewMemberAgency: string = '';
 
   constructor(
@@ -23,9 +25,10 @@ export class CrewMemberComponent implements OnInit {
   }
 
   fetchCrewMember() {
-    this.crewService.getCrew(this.crewMemberId).subscribe({
+    this.crewService.getCrew(this.crewMember.crew).subscribe({
       next: (res) => {
         this.crewMemberName = res.name;
+        this.crewMemberRole = this.crewMember.role;
         this.crewMemberAgency = res.agency;
       },
       error: (err) => {

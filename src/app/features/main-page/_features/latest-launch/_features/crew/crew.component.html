@@ -1,6 +1,6 @@
 <article>
-  <section class="crew__title">Crew</section>
-  <ng-container *ngFor="let crewMemberId of crewMembersId">
-    <app-crew-member [crewMemberId]="crewMemberId"></app-crew-member>
+  <section class="title">Crew</section>
+  <ng-container *ngFor="let crewMember of crewMembers">
+    <app-crew-member [crewMember]="crewMember"></app-crew-member>
   </ng-container>
 </article>

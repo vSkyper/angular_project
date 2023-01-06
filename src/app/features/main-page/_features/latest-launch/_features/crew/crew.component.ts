@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CrewMember } from 'src/app/core/models/interfaces';
 
 @Component({
   selector: 'app-crew',
@@ -7,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CrewComponent implements OnInit {
   @Input()
-  public crewMembersId: Array<string> = [];
+  public crewMembers: Array<CrewMember> = [];
 
   constructor() {}
 
