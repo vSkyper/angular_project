@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { RocketService } from 'src/app/core/api/rocket.service';
+import { Information } from 'src/app/core/models/interfaces';
 
 @Component({
   selector: 'app-rocket',
@@ -10,11 +11,7 @@ export class RocketComponent implements OnInit {
   @Input()
   public rocketId: string = '';
 
-  public rocketName: string = '';
-  public rocketHeight: string = '';
-  public rocketDiameter: string = '';
-  public rocketMass: string = '';
-  public rocketFirstFlight: string = '';
+  public rocketInformationList: Array<Information> = [];
 
   constructor(
     private rocketService: RocketService,
@@ -32,11 +29,26 @@ export class RocketComponent implements OnInit {
 
     this.rocketService.getRocket(this.rocketId).subscribe({
       next: (res) => {
-        this.rocketName = res.name;
-        this.rocketHeight = res.height.meters;
-        this.rocketDiameter = res.diameter.meters;
-        this.rocketMass = res.mass.kg;
-        this.rocketFirstFlight = res.first_flight;
+        this.rocketInformationList.push({
+          title: 'Name:',
+          desc: res.name,
+        });
+        this.rocketInformationList.push({
+          title: 'Height:',
+          desc: `${res.height.meters} meters`,
+        });
+        this.rocketInformationList.push({
+          title: 'Diameter:',
+          desc: `${res.diameter.meters} meters`,
+        });
+        this.rocketInformationList.push({
+          title: 'Mass:',
+          desc: `${res.mass.kg} kg`,
+        });
+        this.rocketInformationList.push({
+          title: 'First flight:',
+          desc: res.first_flight,
+        });
       },
       error: (err) => {
         console.log(err);

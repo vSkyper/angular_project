@@ -1,0 +1,16 @@
+import { Component, Input, OnInit } from '@angular/core';
+import { Information } from 'src/app/core/models/interfaces';
+
+@Component({
+  selector: 'app-information-list',
+  templateUrl: './information-list.component.html',
+  styleUrls: ['./information-list.component.scss'],
+})
+export class InformationListComponent implements OnInit {
+  @Input()
+  public teslaRoadsterInformationList: Array<Information> = [];
+
+  constructor() {}
+
+  ngOnInit(): void {}
+}

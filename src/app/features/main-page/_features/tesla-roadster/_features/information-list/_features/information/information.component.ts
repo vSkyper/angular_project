@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Information, _information } from 'src/app/core/models/interfaces';
 
 @Component({
   selector: 'app-information',
@@ -7,17 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InformationComponent implements OnInit {
   @Input()
-  public teslaRoadsterLaunchDate: Date = new Date();
-
-  @Input()
-  public teslaRoadsterMass: string = '';
-
-  @Input()
-  public teslaRoadsterSpeed: string = '';
-
-  @Input()
-  public teslaRoadsterPeriodDays: string = '';
-
+  public teslaRoadsterInformation: Information = _information;
+  
   constructor() {}
 
   ngOnInit(): void {}

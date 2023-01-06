@@ -1,16 +1,6 @@
 <article>
   <section class="title">Rocket</section>
-  <section class="info">{{ rocketName }}</section>
-  <section class="info">
-    <span class="info__title">Height: </span>{{ rocketHeight }} meters
-  </section>
-  <section class="info">
-    <span class="info__title">Diameter: </span>{{ rocketDiameter }} meters
-  </section>
-  <section class="info">
-    <span class="info__title">Mass: </span>{{ rocketMass }} kg
-  </section>
-  <section class="info">
-    <span class="info__title">First flight: </span>{{ rocketFirstFlight }}
-  </section>
+  <app-information-list
+    [rocketInformationList]="rocketInformationList"
+  ></app-information-list>
 </article>
