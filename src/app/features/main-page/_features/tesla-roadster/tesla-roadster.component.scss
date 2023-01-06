@@ -7,3 +7,11 @@
   font-weight: 300;
   margin-bottom: 20px;
 }
+
+.desc {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}

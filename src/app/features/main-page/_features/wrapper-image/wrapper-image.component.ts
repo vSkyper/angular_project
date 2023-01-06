@@ -19,7 +19,7 @@ export class WrapperImageComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  async fetchLatestLaunch() {
+  fetchLatestLaunch() {
     this.latestLaunchService.getLatestLaunch().subscribe({
       next: (res) => {
         this.latestLaunchName = res.name;

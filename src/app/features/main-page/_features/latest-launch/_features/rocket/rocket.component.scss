@@ -1,8 +1,9 @@
-@import '/src/styles/index.scss';
+@import "/src/styles/index.scss";
 
 article {
   border-radius: 12px;
-  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
   padding: 10px;
   min-height: 200px;
 }
@@ -15,4 +16,8 @@ article {
 
 .info {
   padding-top: 10px;
+}
+
+.info__title {
+  font-weight: 600;
 }

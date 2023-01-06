@@ -1,3 +1,13 @@
 <section class="tesla__roadster" id="tesla__roadster">
   <section class="main__title">Tesla Roadster</section>
+  <app-images [images]="teslaRoadsterImages"></app-images>
+  <section class="desc">
+    <app-video></app-video>
+    <app-information
+      [teslaRoadsterLaunchDate]="teslaRoadsterLaunchDate"
+      [teslaRoadsterMass]="teslaRoadsterMass"
+      [teslaRoadsterSpeed]="teslaRoadsterSpeed"
+      [teslaRoadsterPeriodDays]="teslaRoadsterPeriodDays"
+    ></app-information>
+  </section>
 </section>

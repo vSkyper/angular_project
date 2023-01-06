@@ -10,11 +10,11 @@ export class ScrollToDirective {
   @HostListener('click', ['$event'])
   onClick(event: Event) {
     event.preventDefault();
-    
+
     const targetElement = document.querySelector(this.target);
     if (targetElement === null) return;
 
-    targetElement!.scrollIntoView({behavior: 'smooth'});
+    targetElement!.scrollIntoView({ behavior: 'smooth' });
   }
 
   constructor() {}

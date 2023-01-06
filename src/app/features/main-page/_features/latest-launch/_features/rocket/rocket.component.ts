@@ -29,7 +29,7 @@ export class RocketComponent implements OnInit {
 
   fetchRocket() {
     if (this.rocketId === '') return;
-    
+
     this.rocketService.getRocket(this.rocketId).subscribe({
       next: (res) => {
         this.rocketName = res.name;

@@ -10,6 +10,13 @@ import { TeslaRoadsterModule } from './_features/tesla-roadster/tesla-roadster.m
 @NgModule({
   declarations: [MainPageComponent],
   exports: [MainPageComponent],
-  imports: [CommonModule, NavbarModule, WrapperImageModule, LatestLaunchModule, HistoryEventsModule, TeslaRoadsterModule],
+  imports: [
+    CommonModule,
+    NavbarModule,
+    WrapperImageModule,
+    LatestLaunchModule,
+    HistoryEventsModule,
+    TeslaRoadsterModule,
+  ],
 })
 export class MainPageModule {}

@@ -5,7 +5,7 @@ import { CrewMember } from 'src/app/core/models/interfaces';
 @Component({
   selector: 'app-latest-launch',
   templateUrl: './latest-launch.component.html',
-  styleUrls: ['./latest-launch.component.scss']
+  styleUrls: ['./latest-launch.component.scss'],
 })
 export class LatestLaunchComponent implements OnInit {
   public latestLaunchCrewMembers: Array<CrewMember> = [];
@@ -21,7 +21,7 @@ export class LatestLaunchComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  async fetchLatestLaunch() {
+  fetchLatestLaunch() {
     this.latestLaunchService.getLatestLaunch().subscribe({
       next: (res) => {
         this.latestLaunchCrewMembers = res.crew;
@@ -36,5 +36,4 @@ export class LatestLaunchComponent implements OnInit {
       },
     });
   }
-
 }
