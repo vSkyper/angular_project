@@ -1,7 +1,8 @@
 <section class="latest__launch">
   <section class="main__title">More info about latest launch</section>
-  <p>Crew:</p>
-  <ng-container *ngFor="let crewMemberId of latestLaunch.crew">
-    <app-crew [crewMemberId]="crewMemberId"></app-crew>
-  </ng-container>
+  <section class="cards">
+    <app-crew [crewMembersId]="latestLaunchCrewMembersId"></app-crew>
+    <app-rocket [rocketId]="latestLaunchRocketId"></app-rocket>
+    <app-capsules [capsulesId]="latestLaunchCapsulesId"></app-capsules>
+  </section>
 </section>

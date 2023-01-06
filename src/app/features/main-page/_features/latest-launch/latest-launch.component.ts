@@ -7,7 +7,9 @@ import { LatestLaunchService } from 'src/app/core/api/latest-launch.service';
   styleUrls: ['./latest-launch.component.scss']
 })
 export class LatestLaunchComponent implements OnInit {
-  public latestLaunch: any = {};
+  public latestLaunchCrewMembersId: Array<string> = [];
+  public latestLaunchRocketId: string = '5e9d0d95eda69973a809d1ec';
+  public latestLaunchCapsulesId: Array<string> = [];
 
   constructor(
     private latestLaunchService: LatestLaunchService,
@@ -21,7 +23,9 @@ export class LatestLaunchComponent implements OnInit {
   async fetchLatestLaunch() {
     this.latestLaunchService.getLatestLaunch().subscribe({
       next: (res) => {
-        this.latestLaunch = res;
+        this.latestLaunchCrewMembersId = res.crew;
+        this.latestLaunchRocketId = res.rocket;
+        this.latestLaunchCapsulesId = res.capsules;
       },
       error: (err) => {
         console.log(err);

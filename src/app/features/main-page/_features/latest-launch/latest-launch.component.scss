@@ -1,10 +1,15 @@
 .latest__launch {
-  padding: 10px;
-  padding-top: 30px;
-  padding-left: 40px;
+  margin: 30px 40px 0 40px;
 }
 
 .main__title {
   font-size: 40px;
   font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
 }
