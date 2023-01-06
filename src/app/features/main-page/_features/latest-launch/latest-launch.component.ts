@@ -8,7 +8,7 @@ import { LatestLaunchService } from 'src/app/core/api/latest-launch.service';
 })
 export class LatestLaunchComponent implements OnInit {
   public latestLaunchCrewMembersId: Array<string> = [];
-  public latestLaunchRocketId: string = '5e9d0d95eda69973a809d1ec';
+  public latestLaunchRocketId: string = '';
   public latestLaunchCapsulesId: Array<string> = [];
 
   constructor(

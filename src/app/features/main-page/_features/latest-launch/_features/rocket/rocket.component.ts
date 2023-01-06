@@ -21,11 +21,15 @@ export class RocketComponent implements OnInit {
     private changeDetectorRef: ChangeDetectorRef
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  ngOnChanges(): void {
     this.fetchRocket();
   }
 
   fetchRocket() {
+    if (this.rocketId === '') return;
+    
     this.rocketService.getRocket(this.rocketId).subscribe({
       next: (res) => {
         this.rocketName = res.name;
