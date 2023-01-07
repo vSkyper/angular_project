@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, Input, OnInit } from '@angular/core';
 import { RocketService } from 'src/app/core/api/rocket.service';
-import { Information } from 'src/app/core/models/interfaces';
+import { Information } from 'src/app/core/models/interfaces/information/information.interface';
 
 @Component({
   selector: 'app-rocket',

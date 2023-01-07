@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HistoryEvent, _historyEvent } from 'src/app/core/models/interfaces';
+import { HistoryEvent, _historyEvent } from 'src/app/core/models/interfaces/history-event/history-event.interface';
 
 @Component({
   selector: 'app-history-event',

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { NavbarElement, _navbarElement } from 'src/app/core/models/interfaces';
+import { NavbarElement, _navbarElement } from 'src/app/core/models/interfaces/navbar-element/navbar-element.interface';
 
 @Component({
   selector: 'app-navbar-element',

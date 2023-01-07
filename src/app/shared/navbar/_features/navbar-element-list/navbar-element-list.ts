@@ -1,4 +1,4 @@
-import { NavbarElement } from 'src/app/core/models/interfaces';
+import { NavbarElement } from 'src/app/core/models/interfaces/navbar-element/navbar-element.interface';
 
 export const navbarElements: NavbarElement[] = [
   {

@@ -1,7 +1,7 @@
 import { DatePipe, DecimalPipe } from '@angular/common';
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { TeslaRoadsterService } from 'src/app/core/api/tesla-roadster.service';
-import { Information } from 'src/app/core/models/interfaces';
+import { Information } from 'src/app/core/models/interfaces/information/information.interface';
 
 @Component({
   selector: 'app-tesla-roadster',

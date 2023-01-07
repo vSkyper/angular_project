@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HistoryEventsService } from 'src/app/core/api/history-events.service';
-import { HistoryEvent } from 'src/app/core/models/interfaces';
+import { HistoryEvent } from 'src/app/core/models/interfaces/history-event/history-event.interface';
 
 @Component({
   selector: 'app-history-events',

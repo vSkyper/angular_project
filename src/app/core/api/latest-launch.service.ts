@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
+import { LatestLaunch } from '../models/interfaces/latest-launch/latest-launch.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs/internal/Observable';
 export class LatestLaunchService {
   constructor(private httpClient: HttpClient) {}
 
-  getLatestLaunch(): Observable<any> {
-    return this.httpClient.get('https://api.spacexdata.com/v5/launches/latest');
+  getLatestLaunch(): Observable<LatestLaunch> {
+    return this.httpClient.get('https://api.spacexdata.com/v5/launches/latest') as Observable<LatestLaunch>;
   }
 }

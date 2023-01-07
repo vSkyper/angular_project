@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { LatestLaunchService } from 'src/app/core/api/latest-launch.service';
-import { CrewMember } from 'src/app/core/models/interfaces';
+import { LatestLaunchCrewMember } from 'src/app/core/models/interfaces/latest-launch/latest-launch.interface';
 
 @Component({
   selector: 'app-latest-launch',
@@ -8,7 +8,7 @@ import { CrewMember } from 'src/app/core/models/interfaces';
   styleUrls: ['./latest-launch.component.scss'],
 })
 export class LatestLaunchComponent implements OnInit {
-  public latestLaunchCrewMembers: Array<CrewMember> = [];
+  public latestLaunchCrewMembers: Array<LatestLaunchCrewMember> = [];
   public latestLaunchRocketId: string = '';
   public latestLaunchCapsulesId: Array<string> = [];
 
